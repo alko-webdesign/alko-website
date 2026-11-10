@@ -1,0 +1,63 @@
+
+/* ALKO Webdesign – Premium Design C */
+
+:root {
+  --bg: #080b14;
+  --card: #111827;
+  --blue: #3b82f6;
+  --text: #f8fafc;
+  --muted: #a9b8cc;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 20%,
+      rgba(59,130,246,.32), transparent 65%),
+    #080b14;
+}
+
+.hero h1 {
+  font-weight: 850;
+  letter-spacing: -2px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -90px;
+  top: 10%;
+  border-radius: 50%;
+  background: #3b82f6;
+  filter: blur(110px);
+  opacity: .25;
+  pointer-events: none;
+  animation: alkoGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes alkoGlow {
+  from { opacity: .15; }
+  to { opacity: .4; }
+}
+
+.card, article {
+  transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover, article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(59,130,246,.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after { animation: none; }
+  .card, article { transition: none; }
+}

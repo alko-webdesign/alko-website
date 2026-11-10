@@ -279,6 +279,34 @@
       <span>Regensburg, Deutschland</span>
       <span>© 2026 ALKO Webdesign</span>
     </div>
-  </footer>
+  </fotter>
+    
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: #3b82f6;
+    filter: blur(110px);
+    opacity: 0.25;
+    border-radius: 50%;
+    top: 10%;
+    right: -80px;
+    pointer-events: none;
+    animation: alkoGlow 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes alkoGlow {
+    from { opacity: 0.15; transform: translateY(0); }
+    to { opacity: 0.4; transform: translateY(50px); }
+  }
+</style>
+
 </body>
 </html>

@@ -308,5 +308,55 @@
   }
 </style>
 
+<style>
+  /* Premium-Buttons */
+  .btn, button {
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+  }
+
+  .btn:hover, button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px #3b82f655;
+  }
+
+  /* Moderne Projektkarten */
+  article {
+    transition: transform .35s ease,
+                border-color .35s ease;
+  }
+
+  article:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+  }
+
+  /* Elegante Animation */
+  @keyframes premiumFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero h1 {
+    animation: premiumFade 1s ease both;
+  }
+
+  .hero p {
+    animation: premiumFade 1.3s ease both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero h1, .hero p {
+      animation: none;
+    }
+  }
+</style>
+
 </body>
 </html>
